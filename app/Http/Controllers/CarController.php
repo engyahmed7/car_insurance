@@ -42,7 +42,7 @@ class CarController extends Controller
             'specification' => $requestdata['specification'],
             'city' => $requestdata['city'],
             'year' => $requestdata['year'],
-            'pack_id' => $requestdata['pack_id'],
+            // 'pack_id' => $requestdata['pack_id'],
             'updated_at' => $requestdata['updated_at'],
             'created_at' => $requestdata['created_at'],
         )
@@ -79,7 +79,7 @@ class CarController extends Controller
             'specification' => $request['specification'],
             'city' => $request['city'],
             'year' => $request['year'],
-            'pack_id' => $request['pack_id'],
+            // 'pack_id' => $request['pack_id'],
             'updated_at' => $request['updated_at'],
             'created_at' => $request['created_at'],
         )

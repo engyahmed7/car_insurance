@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePackListTable extends Migration
+class CreatePackListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreatePackListTable extends Migration
      */
     public function up()
     {
-        Schema::create('pack_list', function (Blueprint $table) {
-            $table->pack_id()->unique();
+        Schema::create('pack_lists', function (Blueprint $table) {
+            $table->bigIncrements('pack_id');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreatePackListTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pack_list');
+        Schema::dropIfExists('pack_lists');
     }
 }
